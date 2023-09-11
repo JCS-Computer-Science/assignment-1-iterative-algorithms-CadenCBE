@@ -7,8 +7,17 @@ function binarySearch(array, searchTerm) {
 	 ** repeat the above process for the subset of the array
 	 ** keep repeating with smaller and smaller subsets until you find the searchTerm
 	 */
-
+	if (array[Math.round(array.length / 2)] == searchTerm){
+		return array[Math.round(array.length / 2)];
+	}else{
+		if(array[Math.round(array.length / 2)] > searchTerm){
+			if (array[Math.round(array.length / 4)*3] == searchTerm){
+				return array[Math.round(array.length / 4)*3]
+			}
+		}
+	}
 	return null;
 }
 
 module.exports = binarySearch;
+
