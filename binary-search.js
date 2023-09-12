@@ -7,13 +7,22 @@ function binarySearch(array, searchTerm) {
 	 ** repeat the above process for the subset of the array
 	 ** keep repeating with smaller and smaller subsets until you find the searchTerm
 	 */
-	if (array[Math.round(array.length / 2)] == searchTerm){
-		return array[Math.round(array.length / 2)];
-	}else{
-		if(array[Math.round(array.length / 2)] > searchTerm){
-			if (array[Math.round(array.length / 4)*3] == searchTerm){
-				return array[Math.round(array.length / 4)*3]
-			}
+
+	// let mid = Math.round(array.length / 2)
+
+	// function thefunny(){
+	// 	if (array[mid] == searchTerm){
+	// 		return array[Math.round(array.length / 2)];
+	// 	}else{
+	// 		if(array[mid] > searchTerm){
+	// 			console.log("SEX!");
+	// 		} 
+	// 	}
+	// }
+
+	for(let i = 0; i < array.length; i++){
+		if(array[i] == searchTerm){
+			return(i);
 		}
 	}
 	return null;
