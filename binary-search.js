@@ -15,7 +15,7 @@ function binarySearch(array, searchTerm) {
 	// 		return array[Math.round(array.length / 2)];
 	// 	}else{
 	// 		if(array[mid] > searchTerm){
-	// 			console.log("SEX!");
+	// 			
 	// 		} 
 	// 	}
 	// }

@@ -6,7 +6,16 @@ function selectionSort(array) {
 	 ** for the smallest, then swap it with the second element.
 	 ** Continue like this until you have only one element left.
 	 */
-
+	let temp;
+	let smallest = array[0];
+	for(let i = 0; i < array.length; i++){
+		if(array[i] < smallest){
+			smallest = array[i];
+		}
+		temp = array[i]
+		array[i] = smallest
+		smallest = temp
+	}
 	return array;
 }
 
