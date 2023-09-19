@@ -8,23 +8,30 @@ function binarySearch(array, searchTerm) {
 	 ** keep repeating with smaller and smaller subsets until you find the searchTerm
 	 */
 
-	// let mid = Math.round(array.length / 2)
-
-	// function thefunny(){
-	// 	if (array[mid] == searchTerm){
-	// 		return array[Math.round(array.length / 2)];
-	// 	}else{
-	// 		if(array[mid] > searchTerm){
-	// 			
-	// 		} 
-	// 	}
-	// }
-
-	for(let i = 0; i < array.length; i++){
-		if(array[i] == searchTerm){
-			return(i);
+	let mid = Math.round(array.length / 2)
+	function funny(){
+		if (array[mid] == searchTerm){
+			return array[mid];
+		}else{
+			if(searchTerm < array[mid]){
+				for(let i = 0; i < mid; i++){
+					array.splice(mid + i, 1);
+					funny()
+				}
+			}else{
+				for(let i = 0; i < mid; i++){
+					array.splice(i, 1);
+					funny()
+				}
+			}
 		}
 	}
+	funny();
+	//for(let i = 0; i < array.length; i++){
+	//	if(array[i] == searchTerm){
+	//		return(i);
+	//	}
+	//}
 	return null;
 }
 
